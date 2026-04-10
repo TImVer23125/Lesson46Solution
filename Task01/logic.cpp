@@ -1,9 +1,9 @@
-int get_max(int array[],int size) {
+int get_max(int array[], int size) {
 	int max = array[0];
 
 	for (int i = 1; i < size; i++)
 	{
-		if (max < array[i]){
+		if (max < array[i]) {
 			max = array[i];
 		}
 	}
@@ -22,4 +22,14 @@ int get_min(int array[], int size) {
 	}
 
 	return min;
+}
+
+double get_avg(int array[], int size) {
+	double sum = 0;
+
+	for (int i = 0; i < size; i++)
+	{
+		sum += array[i];
+	}
+	return sum / size;
 }

@@ -17,9 +17,11 @@ int main() {
 
 	int max = get_max(array, size);
 	int min = get_min(array, size);
+	double arithmetical = get_avg(array, size);
 
 	print("\nMax value is " + to_string(max) + ".");
 	print("\nMin value is " + to_string(min) + ".");
+	print("\n Arithmetical mean is " + to_string(arithmetical) + ".");
 
 	return 0;
 }
