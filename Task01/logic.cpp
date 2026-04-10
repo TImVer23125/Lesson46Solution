@@ -43,5 +43,40 @@ double calculate_geometrical_mean(int array[], int size) {
 	{
 		p *= array[i];
 	}
-	return pow(p, 1.0 /size);
+	return pow(p, 1.0 / size);
+}
+
+int get_max_index(int array[], int size) {
+	int index = 0;
+
+	for (int i = 0; i < size; i++)
+	{
+		if (array[index] < array[i]) {
+			index = i;
+		}
+	}
+
+	return index;
+}
+
+int get_min_index(int array[], int size) {
+	int index = 0;
+
+	for (int i = 0; i < size; i++)
+	{
+		if (array[index] > array[i]) {
+			index = i;
+		}
+	}
+
+	return index;
+}
+
+void swap_extrem_elements(int array[], int size) {
+	int index_max = get_max_index(array, size);
+	int index_min = get_min_index(array, size);
+
+	int t = array[index_max];
+	array[index_max] = array[index_min];
+	array[index_min] = t;
 }

@@ -26,5 +26,10 @@ int main() {
 	print("\n Arithmetical mean is " + to_string(arithmetical) + ".");
 	print("\n Geometrical mean is " + to_string(geometrical) + ".");
 
+	swap_extrem_elements(array, size);
+
+	print("\nAfter array: ");
+	print(convert(array, size));
+
 	return 0;
 }
